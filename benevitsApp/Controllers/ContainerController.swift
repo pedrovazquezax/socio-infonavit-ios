@@ -66,7 +66,3 @@ extension ContainerController: HomeControllerDelegate{
         showMenuController(shoudExpand: isExpanded )
     }
 }
-
-protocol HomeControllerDelegate: AnyObject{
-    func handleMenuToogle()
-}

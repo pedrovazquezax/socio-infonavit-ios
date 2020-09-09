@@ -17,13 +17,16 @@ class LogInController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        logInButton.layer.cornerRadius = logInButton.frame.height/2
-        mailTextField.keyboardType = .emailAddress
-        mailTextField.delegate = self
-        passwordTextField.delegate = self
+        self.logInButton.layer.cornerRadius = logInButton.frame.height/2
+        self.logInButton.layer.masksToBounds = true
+        self.mailTextField.keyboardType = .emailAddress
+        self.mailTextField.delegate = self
+        self.mailTextField.text = "gerardo@nextia.mx"
+        self.passwordTextField.text = "securepassword"
+        self.passwordTextField.delegate = self
         //agregamos las acciones a los textFields para activar y desactivarlos
-        mailTextField.addTarget(self, action: #selector(self.textFieldChanged(_:)), for: UIControl.Event.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(self.textFieldChanged(_:)), for: UIControl.Event.editingChanged)
+        self.mailTextField.addTarget(self, action: #selector(self.textFieldChanged(_:)), for: UIControl.Event.editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(self.textFieldChanged(_:)), for: UIControl.Event.editingChanged)
     }
     
     //revisa Cambios en textField
@@ -37,11 +40,11 @@ class LogInController: UIViewController, UITextFieldDelegate {
     //Activao desactiva el boton de entrar
     func setLoginButtonEnabled(enabled:Bool) {
         if enabled {
-            logInButton.backgroundColor = UIColor(named: "rojoInfonavit")
-            logInButton.isEnabled = true
+             self.logInButton.backgroundColor = UIColor(named: "rojoInfonavit")
+             self.logInButton.isEnabled = true
         } else {
-            logInButton.backgroundColor = UIColor(named: "grisInfonavit")
-            logInButton.isEnabled = false
+             self.logInButton.backgroundColor = UIColor(named: "grisInfonavit")
+             self.logInButton.isEnabled = false
         }
     }
     //hace el cambio entre los TextFields y manda la peticion POST
@@ -51,7 +54,7 @@ class LogInController: UIViewController, UITextFieldDelegate {
          if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
          } else {
-            if logInButton.isEnabled{
+            if  self.logInButton.isEnabled{
                 logIn()
             }
             textField.resignFirstResponder()
@@ -67,33 +70,31 @@ class LogInController: UIViewController, UITextFieldDelegate {
     }
     //metodo post para el logIn
     func logIn(){
-        guard let mail:String = mailTextField.text else {
+        guard let mail:String =  self.mailTextField.text else {
            return
         }
-        guard let pass:String = passwordTextField.text else{
+        guard let pass:String =  self.passwordTextField.text else{
             return
         }
          let service = Service()
-        service.postLogIn(user: LoginData(email: mail, password: pass))
-        service.loginCompletitionHandler{ [weak self](auth,status,message) in
-            if status{
-                 let VC = ContainerController()
-                       VC.modalPresentationStyle = .fullScreen
-                self!.present(VC, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            service.postLogIn(user: LoginData(email: mail, password: pass))
+            service.loginCompletitionHandler{ [weak self](auth,status,message) in
+                if status{
+                    let VC = ContainerController()
+                    VC.modalPresentationStyle = .fullScreen
+                    self!.present(VC, animated: true, completion: nil)
+                    
+                }else{
+                    let alert = UIAlertController(title: "Usuario y contraseña Incorrectos", message: "Intente de nuevo", preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+                    self!.present(alert, animated: true)
+                }
                 
-            }else{
-                let alert = UIAlertController(title: "Usuario y contraseña Incorrectos", message: "Intente de nuevo", preferredStyle: .alert)
-
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-
-                self!.present(alert, animated: true)
             }
-            
         }
-        let VC = ContainerController()
-                              VC.modalPresentationStyle = .fullScreen
-                       self.present(VC, animated: true, completion: nil)
-       
     }
 
 }

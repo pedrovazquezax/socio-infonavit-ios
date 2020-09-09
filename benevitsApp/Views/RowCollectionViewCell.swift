@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class RowCollectionViewCell: UICollectionViewCell {
     let benevitIdentifier:String = "benevitCell"
@@ -30,14 +31,7 @@ extension RowCollectionViewCell:UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: benevitIdentifier, for: indexPath) as! BenevitCollectionViewCell
-        if benevits[indexPath.item].locked ?? false{
-            cell.urlString = benevits[indexPath.item].vectorFullPath
-        }else{
-            cell.urlString  = benevits[indexPath.item].ally.miniLogoFullPath
-            cell.discountBenevitLabel.text = benevits[indexPath.item].name
-            cell.placeBenevitLabel.text = benevits[indexPath.item].territories[0].name
-            cell.leftBenevitLabel.text = benevits[indexPath.item].expirationDate
-        }
+        cell.benevit = benevits[indexPath.item]
         return cell
     }
     
@@ -47,6 +41,16 @@ extension RowCollectionViewCell:UICollectionViewDelegate,UICollectionViewDataSou
     
  
     
+    
+    
+}
+
+
+
+extension RowCollectionViewCell: SkeletonCollectionViewDataSource{
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return benevitIdentifier
+    }
     
     
 }

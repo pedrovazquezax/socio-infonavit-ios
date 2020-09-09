@@ -7,28 +7,29 @@ class Service{
     typealias callBackBenevits = (_ wallets:AllBenevits?,_ status:Bool,_ mesage:String ) -> Void
     var  callBackBenevit:callBackBenevits?
     
-    typealias loginCallBack = (_ wallets:String?,_ status:Bool,_ mesage:String ) -> Void
+    typealias loginCallBack = (_ wallets:userSetings?,_ status:Bool,_ mesage:String ) -> Void
     var  callBacklogin :loginCallBack?
     
     func postLogIn(user:LoginData){
-        AF.request(self.baseUrl + "login",method: .post,parameters: ["user":["email":user.email, "password":user.password]],encoding: URLEncoding.default,headers: nil,interceptor: nil).responseJSON{
+        AF.request(self.baseUrl + "login",method: .post,parameters: ["user":["email":user.email, "password":user.password]],encoding: URLEncoding.default,headers: nil,interceptor: nil).response{
             (response) in
+            
+            if let header = response.response?.allHeaderFields as? [String : Any] {
+                if let tokenAux = header["Authorization"] as? String{
+                    UserDefaults.standard.set(tokenAux, forKey: "Authorization")
+                }
+            }
            guard let data = response.data else {return}
            do{
-               let wallets = try JSONDecoder().decode([userSetings].self,from:data)
-              
-               self.callBacklogin?("auth",true,"")
+            let data = try JSONDecoder().decode(userSetings.self,from:data)
+               self.callBacklogin?(data,true,"")
            }catch{
-              
+
                self.callBacklogin?(nil,false,error.localizedDescription)
            }
-
-            
-            
+    
         }
     }
-    
-    
     func getMemberWallets(Autorization:String){
         let headers: HTTPHeaders = [
             "Authorization": Autorization,
@@ -70,8 +71,9 @@ class Service{
         self.callBackBenevit = callBack
         
     }
+    
     func loginCompletitionHandler(callBack:@escaping loginCallBack){
-        self.callBacklogin? = callBack
+        self.callBacklogin = callBack
         
     }
     

@@ -25,6 +25,8 @@
 		ADA059A12508134F007B73DC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059A02508134F007B73DC /* Data.swift */; };
 		ADA059A525081368007B73DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059A425081368007B73DC /* Client.swift */; };
 		ADA059A8250826BD007B73DC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ADA059A7250826BD007B73DC /* Alamofire */; };
+		ADD0F5BA25095A76004A096B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0F5B925095A76004A096B /* Extensions.swift */; };
+		ADD0F5BC25095A89004A096B /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0F5BB25095A89004A096B /* protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		ADA059982507FE7E007B73DC /* RowCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowCollectionViewCell.xib; sourceTree = "<group>"; };
 		ADA059A02508134F007B73DC /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		ADA059A425081368007B73DC /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		ADD0F5B925095A76004A096B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ADD0F5BB25095A89004A096B /* protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		ADA059712507F929007B73DC /* benevitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				ADD0F5B825095A64004A096B /* Helpers */,
 				ADA0598A2507F989007B73DC /* Controllers */,
 				ADA059892507F97F007B73DC /* Views */,
 				ADA059882507F970007B73DC /* Network */,
@@ -131,6 +136,15 @@
 				ADA059902507FE55007B73DC /* MenuViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ADD0F5B825095A64004A096B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ADD0F5B925095A76004A096B /* Extensions.swift */,
+				ADD0F5BB25095A89004A096B /* protocols.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +232,8 @@
 				ADA0599A2507FE7E007B73DC /* RowCollectionViewCell.swift in Sources */,
 				ADA059772507F929007B73DC /* LogInController.swift in Sources */,
 				ADA059932507FE55007B73DC /* MainCollectionViewController.swift in Sources */,
+				ADD0F5BC25095A89004A096B /* protocols.swift in Sources */,
+				ADD0F5BA25095A76004A096B /* Extensions.swift in Sources */,
 				ADA059922507FE55007B73DC /* MenuViewController.swift in Sources */,
 				ADA059732507F929007B73DC /* AppDelegate.swift in Sources */,
 				ADA059752507F929007B73DC /* SceneDelegate.swift in Sources */,

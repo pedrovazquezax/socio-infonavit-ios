@@ -27,10 +27,10 @@ class MainCollectionViewController: UICollectionViewController,UICollectionViewD
                collectionView.delegate = self
                collectionView.dataSource = self
                
-            DispatchQueue.main.async{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5){
                  let service = Service()
-                   service.getLandingBenevits(Autorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTk5NTk2OTk0LCJleHAiOjE2MzExMzI5OTQsImp0aSI6IjFhZDZmNjI0LTQ5N2YtNDY4NC04Y2RmLTRhYWZlZTMxNTdhNSJ9.lXvPOpxQfPfOUqrOqY3dmRnKz-GXLrvBff1n-J2nbZc")
-                   service.getMemberWallets(Autorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTk5NTk2OTk0LCJleHAiOjE2MzExMzI5OTQsImp0aSI6IjFhZDZmNjI0LTQ5N2YtNDY4NC04Y2RmLTRhYWZlZTMxNTdhNSJ9.lXvPOpxQfPfOUqrOqY3dmRnKz-GXLrvBff1n-J2nbZc")
+            service.getLandingBenevits(Autorization: UserDefaults.standard.object(forKey: "Authorization") as! String)
+                   service.getMemberWallets(Autorization:  UserDefaults.standard.object(forKey: "Authorization") as! String)
                 service.walletCompletitionHandler{ [weak self](wallets,status,message) in
                     if status{
                         guard let self = self else{return}

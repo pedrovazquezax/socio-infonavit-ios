@@ -16,12 +16,50 @@
                 <rect key="frame" x="0.0" y="0.0" width="595" height="337"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mP-oK-tny">
+                        <rect key="frame" x="10" y="20" width="575" height="297"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7a-t9-L7J">
+                                <rect key="frame" x="10" y="217.5" width="555" height="59.5"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.31372549020000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LO QUIERO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="unlockActionButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="19i-OF-doa"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-HH-Jyv">
+                                <rect key="frame" x="5" y="5" width="565" height="207.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XPG-HH-Jyv" secondAttribute="trailing" constant="5" id="Ahg-bT-yMi"/>
+                            <constraint firstAttribute="bottom" secondItem="g7a-t9-L7J" secondAttribute="bottom" constant="20" id="BIa-hy-HNN"/>
+                            <constraint firstItem="XPG-HH-Jyv" firstAttribute="top" secondItem="7mP-oK-tny" secondAttribute="top" constant="5" id="DYZ-1i-Jby"/>
+                            <constraint firstItem="g7a-t9-L7J" firstAttribute="leading" secondItem="7mP-oK-tny" secondAttribute="leading" constant="10" id="Dq2-nV-6fS"/>
+                            <constraint firstItem="g7a-t9-L7J" firstAttribute="height" secondItem="7mP-oK-tny" secondAttribute="height" multiplier="0.2" id="ISl-pa-Mmq"/>
+                            <constraint firstAttribute="trailing" secondItem="g7a-t9-L7J" secondAttribute="trailing" constant="10" id="Mgz-L1-5Tn"/>
+                            <constraint firstItem="XPG-HH-Jyv" firstAttribute="leading" secondItem="7mP-oK-tny" secondAttribute="leading" constant="5" id="MsT-S3-0vm"/>
+                            <constraint firstItem="g7a-t9-L7J" firstAttribute="top" secondItem="XPG-HH-Jyv" secondAttribute="bottom" constant="5" id="utL-GJ-JVu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddX-qx-XZG">
                         <rect key="frame" x="10" y="20" width="575" height="297"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gYR-hh-3aZ">
                                 <rect key="frame" x="0.0" y="0.0" width="575" height="119"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ku-DK-Wxq">
                                 <rect key="frame" x="5" y="119" width="565" height="173"/>
@@ -61,6 +99,9 @@
                                     <constraint firstItem="Fmr-xR-lkR" firstAttribute="height" secondItem="7ku-DK-Wxq" secondAttribute="height" multiplier="0.2" id="pJ5-u7-ILl"/>
                                     <constraint firstItem="nip-ig-fOG" firstAttribute="top" secondItem="7ku-DK-Wxq" secondAttribute="top" id="vva-AS-yI2"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -76,23 +117,34 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadious" value="10"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="7mP-oK-tny" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="C7t-2y-MGX"/>
+                <constraint firstAttribute="trailing" secondItem="7mP-oK-tny" secondAttribute="trailing" constant="10" id="EG2-kF-HnW"/>
                 <constraint firstAttribute="trailing" secondItem="ddX-qx-XZG" secondAttribute="trailing" constant="10" id="NtG-3O-sR7"/>
                 <constraint firstAttribute="bottom" secondItem="ddX-qx-XZG" secondAttribute="bottom" constant="20" id="Pel-y4-Q92"/>
                 <constraint firstItem="ddX-qx-XZG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="QSR-1F-Bir"/>
                 <constraint firstItem="ddX-qx-XZG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="lll-hp-bCW"/>
+                <constraint firstItem="7mP-oK-tny" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="nVh-Zb-TL8"/>
+                <constraint firstAttribute="bottom" secondItem="7mP-oK-tny" secondAttribute="bottom" constant="20" id="w8x-9a-ug2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="595" height="337"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="LockedButton" destination="g7a-t9-L7J" id="qfY-YI-ZGN"/>
+                <outlet property="LockedImageView" destination="XPG-HH-Jyv" id="4c1-R3-Ofr"/>
                 <outlet property="benevitImageView" destination="gYR-hh-3aZ" id="71k-Dn-TFS"/>
                 <outlet property="containerView" destination="ddX-qx-XZG" id="Vmx-RD-2Uo"/>
                 <outlet property="discountBenevitLabel" destination="nip-ig-fOG" id="ngt-F3-3T5"/>
                 <outlet property="leftBenevitLabel" destination="LkY-f1-Dai" id="P0u-lm-E16"/>
+                <outlet property="lockedView" destination="7mP-oK-tny" id="4je-Um-Yh3"/>
                 <outlet property="placeBenevitLabel" destination="Fmr-xR-lkR" id="v9M-or-sVy"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="-14.397321428571427"/>

@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADA059732507F929007B73DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059722507F929007B73DC /* AppDelegate.swift */; };
+		ADA059752507F929007B73DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059742507F929007B73DC /* SceneDelegate.swift */; };
+		ADA059772507F929007B73DC /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059762507F929007B73DC /* LogInController.swift */; };
+		ADA0597C2507F92C007B73DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA0597B2507F92C007B73DC /* Assets.xcassets */; };
+		ADA0597F2507F92C007B73DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA0597D2507F92C007B73DC /* LaunchScreen.storyboard */; };
+		ADA0598C2507FA53007B73DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA0598B2507FA53007B73DC /* Main.storyboard */; };
+		ADA059912507FE55007B73DC /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0598D2507FE55007B73DC /* ContainerController.swift */; };
+		ADA059922507FE55007B73DC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0598E2507FE55007B73DC /* MenuViewController.swift */; };
+		ADA059932507FE55007B73DC /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0598F2507FE55007B73DC /* MainCollectionViewController.swift */; };
+		ADA059942507FE55007B73DC /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA059902507FE55007B73DC /* MenuViewController.xib */; };
+		ADA059992507FE7E007B73DC /* BenevitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA059952507FE7E007B73DC /* BenevitCollectionViewCell.xib */; };
+		ADA0599A2507FE7E007B73DC /* RowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059962507FE7E007B73DC /* RowCollectionViewCell.swift */; };
+		ADA0599B2507FE7E007B73DC /* BenevitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059972507FE7E007B73DC /* BenevitCollectionViewCell.swift */; };
+		ADA0599C2507FE7E007B73DC /* RowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADA059982507FE7E007B73DC /* RowCollectionViewCell.xib */; };
+		ADA0599F250804CA007B73DC /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = ADA0599E250804CA007B73DC /* SkeletonView */; };
+		ADA059A12508134F007B73DC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059A02508134F007B73DC /* Data.swift */; };
+		ADA059A525081368007B73DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA059A425081368007B73DC /* Client.swift */; };
+		ADA059A8250826BD007B73DC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ADA059A7250826BD007B73DC /* Alamofire */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ADA0596F2507F929007B73DC /* benevitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = benevitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA059722507F929007B73DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADA059742507F929007B73DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADA059762507F929007B73DC /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
+		ADA0597B2507F92C007B73DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA0597E2507F92C007B73DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADA059802507F92C007B73DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA0598B2507FA53007B73DC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ADA0598D2507FE55007B73DC /* ContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		ADA0598E2507FE55007B73DC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ADA0598F2507FE55007B73DC /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		ADA059902507FE55007B73DC /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		ADA059952507FE7E007B73DC /* BenevitCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BenevitCollectionViewCell.xib; sourceTree = "<group>"; };
+		ADA059962507FE7E007B73DC /* RowCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADA059972507FE7E007B73DC /* BenevitCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenevitCollectionViewCell.swift; sourceTree = "<group>"; };
+		ADA059982507FE7E007B73DC /* RowCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowCollectionViewCell.xib; sourceTree = "<group>"; };
+		ADA059A02508134F007B73DC /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ADA059A425081368007B73DC /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADA0596C2507F929007B73DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA0599F250804CA007B73DC /* SkeletonView in Frameworks */,
+				ADA059A8250826BD007B73DC /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADA059662507F929007B73DC = {
+			isa = PBXGroup;
+			children = (
+				ADA059712507F929007B73DC /* benevitsApp */,
+				ADA059702507F929007B73DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADA059702507F929007B73DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA0596F2507F929007B73DC /* benevitsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADA059712507F929007B73DC /* benevitsApp */ = {
+			isa = PBXGroup;
+			children = (
+				ADA0598A2507F989007B73DC /* Controllers */,
+				ADA059892507F97F007B73DC /* Views */,
+				ADA059882507F970007B73DC /* Network */,
+				ADA059862507F961007B73DC /* Models */,
+				ADA059722507F929007B73DC /* AppDelegate.swift */,
+				ADA059742507F929007B73DC /* SceneDelegate.swift */,
+				ADA0597B2507F92C007B73DC /* Assets.xcassets */,
+				ADA0598B2507FA53007B73DC /* Main.storyboard */,
+				ADA0597D2507F92C007B73DC /* LaunchScreen.storyboard */,
+				ADA059802507F92C007B73DC /* Info.plist */,
+			);
+			path = benevitsApp;
+			sourceTree = "<group>";
+		};
+		ADA059862507F961007B73DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADA059A02508134F007B73DC /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADA059882507F970007B73DC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ADA059A425081368007B73DC /* Client.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ADA059892507F97F007B73DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADA059972507FE7E007B73DC /* BenevitCollectionViewCell.swift */,
+				ADA059952507FE7E007B73DC /* BenevitCollectionViewCell.xib */,
+				ADA059962507FE7E007B73DC /* RowCollectionViewCell.swift */,
+				ADA059982507FE7E007B73DC /* RowCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADA0598A2507F989007B73DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADA059762507F929007B73DC /* LogInController.swift */,
+				ADA0598D2507FE55007B73DC /* ContainerController.swift */,
+				ADA0598F2507FE55007B73DC /* MainCollectionViewController.swift */,
+				ADA0598E2507FE55007B73DC /* MenuViewController.swift */,
+				ADA059902507FE55007B73DC /* MenuViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADA0596E2507F929007B73DC /* benevitsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA059832507F92C007B73DC /* Build configuration list for PBXNativeTarget "benevitsApp" */;
+			buildPhases = (
+				ADA0596B2507F929007B73DC /* Sources */,
+				ADA0596C2507F929007B73DC /* Frameworks */,
+				ADA0596D2507F929007B73DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = benevitsApp;
+			packageProductDependencies = (
+				ADA0599E250804CA007B73DC /* SkeletonView */,
+				ADA059A7250826BD007B73DC /* Alamofire */,
+			);
+			productName = benevitsApp;
+			productReference = ADA0596F2507F929007B73DC /* benevitsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADA059672507F929007B73DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Pedro Antonio Vazquez Rodriguez";
+				TargetAttributes = {
+					ADA0596E2507F929007B73DC = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = ADA0596A2507F929007B73DC /* Build configuration list for PBXProject "benevitsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADA059662507F929007B73DC;
+			packageReferences = (
+				ADA0599D250804CA007B73DC /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				ADA059A6250826BD007B73DC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = ADA059702507F929007B73DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADA0596E2507F929007B73DC /* benevitsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADA0596D2507F929007B73DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA059992507FE7E007B73DC /* BenevitCollectionViewCell.xib in Resources */,
+				ADA0599C2507FE7E007B73DC /* RowCollectionViewCell.xib in Resources */,
+				ADA0598C2507FA53007B73DC /* Main.storyboard in Resources */,
+				ADA0597F2507F92C007B73DC /* LaunchScreen.storyboard in Resources */,
+				ADA0597C2507F92C007B73DC /* Assets.xcassets in Resources */,
+				ADA059942507FE55007B73DC /* MenuViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA0596B2507F929007B73DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA0599A2507FE7E007B73DC /* RowCollectionViewCell.swift in Sources */,
+				ADA059772507F929007B73DC /* LogInController.swift in Sources */,
+				ADA059932507FE55007B73DC /* MainCollectionViewController.swift in Sources */,
+				ADA059922507FE55007B73DC /* MenuViewController.swift in Sources */,
+				ADA059732507F929007B73DC /* AppDelegate.swift in Sources */,
+				ADA059752507F929007B73DC /* SceneDelegate.swift in Sources */,
+				ADA0599B2507FE7E007B73DC /* BenevitCollectionViewCell.swift in Sources */,
+				ADA059A12508134F007B73DC /* Data.swift in Sources */,
+				ADA059A525081368007B73DC /* Client.swift in Sources */,
+				ADA059912507FE55007B73DC /* ContainerController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ADA0597D2507F92C007B73DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA0597E2507F92C007B73DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADA059812507F92C007B73DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADA059822507F92C007B73DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADA059842507F92C007B73DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = benevitsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.pedrovazquezax.benevitsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADA059852507F92C007B73DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = benevitsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.pedrovazquezax.benevitsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADA0596A2507F929007B73DC /* Build configuration list for PBXProject "benevitsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA059812507F92C007B73DC /* Debug */,
+				ADA059822507F92C007B73DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA059832507F92C007B73DC /* Build configuration list for PBXNativeTarget "benevitsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA059842507F92C007B73DC /* Debug */,
+				ADA059852507F92C007B73DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ADA0599D250804CA007B73DC /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.8;
+			};
+		};
+		ADA059A6250826BD007B73DC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ADA0599E250804CA007B73DC /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA0599D250804CA007B73DC /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		ADA059A7250826BD007B73DC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA059A6250826BD007B73DC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = ADA059672507F929007B73DC /* Project object */;
+}
